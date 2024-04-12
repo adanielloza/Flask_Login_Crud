@@ -1,0 +1,34 @@
+{% extends './index.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block customCSS %}
+{% endblock %}
+
+{% block body %}
+<main class="form-signin">
+    <form action="/" method="POST">
+        
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <br />
+      {% for message in messages %}
+      <div class="alert alert-primary alert-dismissible" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    </form>
+{% endblock %}
