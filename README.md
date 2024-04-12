@@ -1,6 +1,36 @@
 # Flask_Login_Crud
 Flask application with Login
 Description: Crear un login y proteger las rutas(si el usuario ingresa a una ruta y no está autenticado que lo redirija al login)
+
+
+Ingeneria applicacion
+
+<img width="764" alt="image" src="https://github.com/adanielloza/Flask_Login_Crud/assets/123408012/327bc097-e93a-4cc8-b27c-91d27386d1d9">
+
+Here’s an overview of the structure of a Flask application that uses Flask-Login for user authentication and PostgreSQL as its database:
+
+App Configuration: The Flask app is configured with the database URI and a secret key for session management.
+Database Setup: SQLAlchemy is used to set up the PostgreSQL database. A User model is defined with id, username, and password fields.
+Login Manager Setup: Flask-Login’s LoginManager is initialized. It handles the session management for logged in users.
+User Loader Callback: A user loader callback function is defined. This tells Flask-Login how to find a specific user from the ID stored in the session.
+Login Route: A /login route is defined. If the method is POST, it checks the username and password provided by the user, and if they are valid, it logs the user in and redirects them to the dashboard.
+Logout Route: A /logout route is defined. It logs out the user and redirects them to the index page.
+Dashboard Route: A /dashboard route is defined. This page can only be accessed by logged in users due to the @login_required decorator.
+This is a basic structure and does not include features like user registration, password hashing, error handling, nor MVC. I used this engineering structure design and adapt it into my MVC-CRUD 
+
+Remember to replace 'postgresql://username:password@localhost/dbname' and 'your_secret_key' with your actual database URI and secret key.
+
+Tambien me guie con este Diagrama 
+![image](https://github.com/adanielloza/Flask_Login_Crud/assets/123408012/e9bf73db-a0cc-4595-8f2d-27103869a6c5)
+diagrama de flujo que describe el proceso de autenticación de un usuario a través de una interfaz web. 
+
+Entrada del usuario: El usuario ingresa sus credenciales (nombre de usuario y contraseña) en la interfaz web.
+Verificación de las credenciales: La aplicación verifica las credenciales proporcionadas por el usuario. Si las credenciales son incorrectas, se le pide al usuario que las introduzca de nuevo.
+Generación de token: Si las credenciales son correctas, la aplicación genera un token de autenticación.
+Envío del token al usuario: La aplicación envía el token al usuario. Este token se almacena en las cookies del navegador del usuario.
+Uso del token para las solicitudes futuras: Cuando el usuario realiza solicitudes futuras a la aplicación, el token de autenticación se envía junto con la solicitud. Esto permite a la aplicación verificar la identidad del usuario sin necesidad de que este introduzca sus credenciales de nuevo.
+Este diagrama destaca el papel de las cookies y los tokens para garantizar un acceso seguro. 
+
 Table of Contents:
 Login
 
