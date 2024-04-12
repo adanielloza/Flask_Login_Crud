@@ -3,7 +3,7 @@ Flask application with Login
 Description: Crear un login y proteger las rutas(si el usuario ingresa a una ruta y no está autenticado que lo redirija al login)
 
 
-Ingeneria applicacion
+Diagrama de Login
 
 <img width="764" alt="image" src="https://github.com/adanielloza/Flask_Login_Crud/assets/123408012/327bc097-e93a-4cc8-b27c-91d27386d1d9">
 
