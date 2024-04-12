@@ -21,7 +21,11 @@ This is a basic structure and does not include features like user registration, 
 Remember to replace 'postgresql://username:password@localhost/dbname' and 'your_secret_key' with your actual database URI and secret key.
 
 Tambien me guie con este Diagrama 
+
+
 ![image](https://github.com/adanielloza/Flask_Login_Crud/assets/123408012/e9bf73db-a0cc-4595-8f2d-27103869a6c5)
+
+
 diagrama de flujo que describe el proceso de autenticación de un usuario a través de una interfaz web. 
 
 Entrada del usuario: El usuario ingresa sus credenciales (nombre de usuario y contraseña) en la interfaz web.
