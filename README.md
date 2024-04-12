@@ -10,11 +10,17 @@ Diagrama de Login
 Here’s an overview of the structure of a Flask application that uses Flask-Login for user authentication and PostgreSQL as its database:
 
 App Configuration: The Flask app is configured with the database URI and a secret key for session management.
+
 Database Setup: SQLAlchemy is used to set up the PostgreSQL database. A User model is defined with id, username, and password fields.
+
 Login Manager Setup: Flask-Login’s LoginManager is initialized. It handles the session management for logged in users.
+
 User Loader Callback: A user loader callback function is defined. This tells Flask-Login how to find a specific user from the ID stored in the session.
+
 Login Route: A /login route is defined. If the method is POST, it checks the username and password provided by the user, and if they are valid, it logs the user in and redirects them to the dashboard.
+
 Logout Route: A /logout route is defined. It logs out the user and redirects them to the index page.
+
 Dashboard Route: A /dashboard route is defined. This page can only be accessed by logged in users due to the @login_required decorator.
 This is a basic structure and does not include features like user registration, password hashing, error handling, nor MVC. I used this engineering structure design and adapt it into my MVC-CRUD 
 
